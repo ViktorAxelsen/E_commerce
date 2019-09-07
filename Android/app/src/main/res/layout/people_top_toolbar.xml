@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/colorPrimary">
+
+    <TextView
+        android:text="购物车"
+        android:textStyle="bold"
+        android:layout_centerInParent="true"
+        style="@style/top_toolbar_text_style"/>
+
+    <CheckBox
+        android:id="@+id/sub_setting"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/baseline_settings_backup_restore_black_18"
+        android:button="@null"
+        style="@style/top_button_style" />
+
+
+</RelativeLayout>

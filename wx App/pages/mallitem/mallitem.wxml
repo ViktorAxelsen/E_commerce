@@ -1,0 +1,21 @@
+  <scroll-view scroll-y="true">
+      <view class="welfares">
+         <block wx:for-items="{{searchShow}}" wx:key="id">
+          <view class="welfares-good" catchtap="catchTapCategory" data-name="{{item.item_name}}" data-goodsid="{{item.item_id}}">
+            <view>
+              <image src="{{item.item_preview_image}}" class="welfares-image" mode="widthFix"/> 
+            </view>
+            <view class="product-name">
+              {{item.item_name}}
+            </view>
+            <view class="product-price-wrap">
+              <p class="product-price-new" >￥{{item.item_price}}</p>  
+              <p class="product-price-old" wx:if ="{{item_prePrice =='0.000'}}">￥{{item.item_prePrice}}</p> 
+              <p class="discount"wx:if ="{{item_off != null}}">{{item.item_off}}折</p>  
+            </view>
+            
+          </view>
+        </block> 
+      </view>
+  </scroll-view>  
+  

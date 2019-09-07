@@ -1,0 +1,53 @@
+.icon:hover span {
+    width: 35px;
+    height: 35px;
+    border-radius: 100px;
+    margin: -18px;
+}
+.qq span {
+    background-color: #4099ff;
+}
+.weichat span {
+    background-color: #2d9822;
+}
+.weibo span {
+    background-color: #CB2028;
+}
+.phone span {
+    background-color:#E04D84;
+}
+
+/* Icons */
+.icon i {
+    background: none;
+    color: #000;
+    height: 35px;
+    left: 0;
+    line-height: 35px;
+    position: absolute;
+    top: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 35px;
+    z-index: 10;
+}
+.icon .fa-qq {
+    color: #4099ff;
+}
+.icon .fa-weichat {
+    color: #2d9822;
+}
+.icon .fa-weibo {
+    color: #CB2028;
+}
+.icon .fa-phone {
+    color: #E04D84;
+}
+.icon:hover .fa-weichat,
+.icon:hover .fa-qq,
+.icon:hover .fa-weibo,
+.icon:hover .fa-phone {
+    color: white;
+}

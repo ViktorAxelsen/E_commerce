@@ -1,0 +1,56 @@
+<form bindsubmit="saveTextinfo">
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">商品名称</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" name="item_name" placeholder="小于10字符" />
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">商品现价</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" name="item_price"  placeholder="商品现价(优惠后)" />
+      </view>
+    </view>
+  <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">商品库存</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" name="item_stoke"  type='number' placeholder="剩余库存量" />
+      </view>
+    </view>
+     <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">商品原价</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" name="item_prePrice"   placeholder="商品原价" />
+      </view>
+    </view>
+     <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">商品折扣</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" name="item_off"   placeholder="数字:如打8折就写8" />
+      </view>
+    </view>
+<view class="weui-cell weui-cell_select">
+      <view class="weui-cell__hd weui-cell__hd_in-select-after">
+        <view class="weui-label">商品种类</view>
+      </view>
+      <view class="weui-cell__bd">
+        <picker bindchange="bindPickerChange2" value="{{objectIndex}}" range="{{subCategory}}" range-key="item_subCategory">
+          <view class="weui-select weui-select_in-select-after">{{subCategory[objectIndex].item_subCategory}}</view>
+          <input name="transportDay" hidden="true" value="{{transportValues[transportIndex]}}" />
+        </picker>
+      </view>
+    </view>
+    </view>
+    <button class="weui-btn" type="primary" form-type="submit">文字信息输入完成</button>
+</form>

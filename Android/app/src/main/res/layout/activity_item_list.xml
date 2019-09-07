@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner_item_list_toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:layout_scrollFlags="scroll|enterAlways|snap">
+
+            <Button
+                android:id="@+id/back"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/outline_arrow_back_ios_black_18" />
+
+            <android.support.v7.widget.SearchView
+                android:id="@+id/search_view"
+                android:layout_width="250dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/back"
+                android:layout_centerVertical="true"
+                android:background="@drawable/rounded_corner_search_box"
+                app:queryHint="搜你想搜"
+                app:iconifiedByDefault="true"></android.support.v7.widget.SearchView>
+
+            <Button
+                android:id="@+id/search"
+                android:layout_width="30dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:text="搜索"
+                android:textColor="@color/colorNavHeader"
+                android:background="@null"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <RadioGroup
+                android:id="@+id/top_toolbar_radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/comprehensive"
+                    android:text="综合"
+                    android:textStyle="bold"
+                    style="@style/bottom_radio_button_style"/>
+
+                <RadioButton
+                    android:id="@+id/sale"
+                    android:text="销量"
+                    android:textStyle="bold"
+                    style="@style/bottom_radio_button_style"/>
+
+                <RadioButton
+                    android:id="@+id/price"
+                    android:text="价格"
+                    android:textStyle="bold"
+                    style="@style/bottom_radio_button_style"/>
+
+
+                <RadioButton
+                    android:id="@+id/screen"
+                    android:text="筛选"
+                    android:textStyle="bold"
+                    style="@style/bottom_radio_button_style"/>
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycle_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="?attr/colorPrimary">
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/outline_arrow_back_ios_black_18" />
+
+    <TextView
+        android:text="设置"
+        android:layout_toRightOf="@id/back"
+        android:layout_marginLeft="5dp"
+        style="@style/top_toolbar_text_style"/>
+
+</RelativeLayout>

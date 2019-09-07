@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/main"
+        android:icon="@drawable/bottom_toolbar_main_image_selector"
+        android:title="Home"/>
+
+    <item
+        android:id="@+id/people"
+        android:icon="@drawable/bottom_toolbar_people_image_selector"
+        android:title="Friends"/>
+
+    <item
+        android:id="@+id/social"
+        android:icon="@drawable/bottom_toolbar_social_image_selector"
+        android:title="Social"/>
+
+    <!--<item-->
+        <!--android:id="@+id/person"-->
+        <!--android:icon="@drawable/bottom_toolbar_person_image_selector"-->
+        <!--android:title="Me"/>-->
+
+</menu>

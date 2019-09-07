@@ -1,0 +1,47 @@
+/*全局样式*/  
+/* page {  
+    padding: 20px 0;  
+}   */
+  
+/*主容器*/  
+.stepper {  
+    width:90px;  
+    height: 26px;  
+    /*给主容器设一个边框*/  
+    border: 1rpx solid #818284;  
+    border-radius: 3px;  
+    margin:0 auto;  
+}  
+  
+/*加号和减号*/  
+.stepper .sign {  
+    width: 24px;  
+    line-height: 26px;  
+    text-align: center;  
+    float: left;  
+}  
+  
+/*数值*/  
+.stepper .number {  
+    width: 40px;  
+    height: 26px;  
+    float: left;  
+     margin: 0 auto;   
+    text-align: center;  
+    font-size: 12px;  
+    color: #000000;
+    /*给中间的input设置左右边框即可*/  
+    border-left: 1rpx solid #818284;  
+    border-right: 1rpx solid #818284;  
+    
+}  
+  
+/*普通样式*/  
+.stepper .normal{  
+    color: black;  
+}  
+  
+/*禁用样式*/  
+.stepper .disabled{  
+    color: #ccc;  
+}  

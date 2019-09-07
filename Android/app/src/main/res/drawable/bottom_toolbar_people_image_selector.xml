@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:enterFadeDuration="400"
+    android:exitFadeDuration="400">
+
+    <item android:state_checked="true" android:drawable="@drawable/baseline_shopping_cart_black_18"/>
+    <item android:state_checked="false" android:drawable="@drawable/outline_shopping_cart_black_18"/>
+
+</selector>

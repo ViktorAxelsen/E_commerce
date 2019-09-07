@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="@null">
+
+        <item
+            android:id="@+id/nav_menu_call"
+            android:icon="@drawable/outline_phone_black_18"
+            android:title="Call"/>
+
+        <item
+            android:id="@+id/nav_menu_friends"
+            android:icon="@drawable/outline_group_add_black_18"
+            android:title="Friends"/>
+
+        <item
+            android:id="@+id/nav_menu_location"
+            android:icon="@drawable/outline_location_on_black_18"
+            android:title="Location"/>
+
+        <item
+            android:id="@+id/nav_menu_mail"
+            android:icon="@drawable/outline_email_black_18"
+            android:title="Mail"/>
+
+        <item
+            android:id="@+id/nav_menu_task"
+            android:icon="@drawable/outline_bookmarks_black_18"
+            android:title="Task"/>
+
+        <item
+            android:id="@+id/nav_menu_settings"
+            android:icon="@drawable/outline_settings_black_18"
+            android:title="Settings"/>
+
+        <item android:title="Others">
+
+            <menu>
+
+                <group android:checkableBehavior="@null">
+
+                    <item
+                        android:id="@+id/nav_menu_share"
+                        android:icon="@drawable/outline_share_black_18"
+                        android:title="Share"/>
+
+                    <item
+                        android:id="@+id/nav_menu_feedback"
+                        android:icon="@drawable/outline_feedback_black_18"
+                        android:title="Feedback"/>
+
+                </group>
+
+            </menu>
+
+        </item>
+
+    </group>
+
+</menu>

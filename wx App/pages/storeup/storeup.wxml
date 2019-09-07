@@ -1,0 +1,30 @@
+<form bindsubmit="saveTextinfo">
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">商店名称</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" name="store_name" placeholder="小于10字符" />
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">联系方式</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" name="store_contact_info"  placeholder="电话或邮箱" />
+      </view>
+    </view>
+  <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">商店描述</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" name="store_info"   placeholder="这个店主有点懒~" />
+      </view>
+    </view>
+    
+    <button class="weui-btn" type="primary" form-type="submit">文字信息输入完成</button>
+</view>
+</form>

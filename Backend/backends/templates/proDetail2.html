@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>详情页</title>
+		<link rel="stylesheet" type="text/css" href="{% static "css/public.css"%}"/>
+		<link rel="stylesheet" type="text/css" href="{% static "css/proList.css"%}"/>
+	</head>
+	<body>
+		<!------------------------------head------------------------------>
+		<div class="head">
+			<div class="wrapper clearfix">
+				<div class="clearfix" id="top">
+					<h1 class="fl"><a href="index.html"><img src="{% static "img/logo.png" %}"/></a></h1>
+					<div class="fr clearfix" id="top1">
+						<p class="fl">
+                        {% for it in its %}
+                            <a href="#" >欢迎:</a>
+{#							<a href="login.html" id="login">登录</a>#}
+							<a href="#" id="reg" >{{ it.log_name }}</a>
+                        {% endfor %}
+						</p>
+						<form action="#" method="get" class="fl">
+							<input type="text" placeholder="Search" />
+							<input type="button" />
+						</form>
+						<div class="btn fl clearfix">
+							<a href="my_account.html"><img src="{% static "img/grzx.png" %}"/></a>
+							<a href="#" class="er1"><img src="{% static "img/ewm.png" %}"/></a>
+							<a href="my_cart.html"><img src="{% static "img/gwc.png" %}"/></a>
+							<p><a href="#"><img src="{% static "img/smewm.png" %}"/></a></p>
+						</div>
+					</div>
+                                            <form action="logout" method="post">
+                        {% csrf_token %}
+                         <h2><a href="#" ><strong><input type="submit" value="退出登录"></strong></a></h2>
+
+                        </form>
+				</div>
+
+
+				<ul class="clearfix" id="bott">
+					<li><a href="index.html">主页</a></li>
+					<li>
+						<a href="category1.html">食品</a>
+						<div class="sList">
+							<div class="wrapper  clearfix">
+								<a href="category1.html">
+									<dl>
+										<dt><img src="{% static "img/nav1.jpg" %}"/></dt>
+										<dd>饮品</dd>
+									</dl>
+								</a>
+								<a href="category1.html">
+									<dl>
+										<dt><img src="{% static "img/nav2.jpg" %}"/></dt>
+										<dd>水果</dd>
+									</dl>
+								</a>
+								<a href="category1.html">
+									<dl>
+										<dt><img src="{% static "img/nav3.jpg" %}"/></dt>
+										<dd>坚果</dd>
+									</dl>
+								</a>
+								<a href="category1.html">
+									<dl>
+										<dt><img src="{% static "img/nav4.jpg" %}"/></dt>
+										<dd>糕点</dd>
+									</dl>
+								</a>
+								<a href="category1.html">
+									<dl>
+										<dt><img src="{% static "img/nav5.jpg" %}"/></dt>
+										<dd>零食</dd>
+									</dl>
+								</a>
+                                <a href="category1.html">
+									<dl>
+										<dt><img src="{% static "img/nav6.jpg" %}"/></dt>
+										<dd>雪糕</dd>
+									</dl>
+								</a>
+							</div>
+						</div>
+					</li>
+
+
+					<li>
+						<a href="category2.html">服装护理</a>
+						<div class="sList">
+							<div class="wrapper  clearfix">
+								<a href="category2.html">
+									<dl>
+										<dt><img src="{% static "img/nav7.jpg" %}"/></dt>
+										<dd>男装</dd>
+									</dl>
+								</a>
+								<a href="category2.html">
+									<dl>
+										<dt><img src="{% static "img/nav8.jpg" %}"/></dt>
+										<dd>男鞋</dd>
+									</dl>
+								</a>
+                                <a href="category2.html">
+									<dl>
+										<dt><img src="{% static "img/nav9.jpg" %}"/></dt>
+										<dd>女装</dd>
+									</dl>
+								</a>
+                                <a href="category2.html">
+									<dl>
+										<dt><img src="{% static "img/nav10.jpg" %}"/></dt>
+										<dd>女鞋</dd>
+									</dl>
+								</a>
+                                <a href="category2.html">
+									<dl>
+										<dt><img src="{% static "img/nav11.jpg" %}"/></dt>
+										<dd>香水</dd>
+									</dl>
+								</a>
+                                <a href="category2.html">
+									<dl>
+										<dt><img src="{% static "img/nav12.jpg" %}"/></dt>
+										<dd>口红</dd>
+									</dl>
+								</a>
+
+							</div>
+						</div>
+					</li>
+
+
+					<li>
+						<a href="category3.html">家居日用</a>
+						<div class="sList">
+							<div class="wrapper  clearfix">
+								<a href="category3.html">
+									<dl>
+										<dt><img src="{% static "img/nav13.jpg" %}"/></dt>
+										<dd>家居摆件</dd>
+									</dl>
+								</a>
+								<a href="category3.html">
+									<dl>
+										<dt><img src="{% static "img/nav14.jpg" %}"/></dt>
+										<dd>壁画</dd>
+									</dl>
+								</a>
+								<a href="category3.html">
+									<dl>
+										<dt><img src="{% static "img/nav15.jpg" %}"/></dt>
+										<dd>沐浴</dd>
+									</dl>
+								</a>
+								<a href="category3.html">
+									<dl>
+										<dt><img src="{% static "img/nav16.jpg" %}"/></dt>
+										<dd>护发</dd>
+									</dl>
+								</a>
+								<a href="category3.html">
+									<dl>
+										<dt><img src="{% static "img/nav17.jpg" %}"/></dt>
+										<dd>洗漱</dd>
+									</dl>
+								</a>
+                                <a href="category3.html">
+									<dl>
+										<dt><img src="{% static "img/nav18.jpg" %}"/></dt>
+										<dd>纸巾</dd>
+									</dl>
+								</a>
+							</div>
+						</div>
+					</li>
+
+
+					<li><a href="category4.html">科技产品</a>
+                        <div class="sList">
+							<div class="wrapper  clearfix">
+								<a href="category4.html">
+									<dl>
+										<dt><img src="{% static "img/nav19.jpg" %}"/></dt>
+										<dd>手机</dd>
+									</dl>
+								</a>
+								<a href="category4.html">
+									<dl>
+										<dt><img src="{% static "img/nav20.jpg" %}"/></dt>
+										<dd>平板</dd>
+									</dl>
+								</a>
+								<a href="category4.html">
+									<dl>
+										<dt><img src="{% static "img/nav21.jpg" %}"/></dt>
+										<dd>电脑</dd>
+									</dl>
+								</a>
+								<a href="category4.html">
+									<dl>
+										<dt><img src="{% static "img/nav22.jpg" %}"/></dt>
+										<dd>摄影</dd>
+									</dl>
+								</a>
+								<a href="category4.html">
+									<dl>
+										<dt><img src="{% static "img/nav23.jpg" %}"/></dt>
+										<dd>无人机</dd>
+									</dl>
+								</a>
+                                <a href="category4.html">
+									<dl>
+										<dt><img src="{% static "img/nav24.jpg" %}"/></dt>
+										<dd>智能穿戴</dd>
+									</dl>
+								</a>
+							</div>
+						</div>
+
+
+                    </li>
+
+
+					<li><a href="category5.html">创意礼品</a>
+                        <div class="sList">
+							<div class="wrapper  clearfix">
+								<a href="category5.html">
+									<dl>
+										<dt><img src="{% static "img/nav25.jpg" %}"/></dt>
+										<dd>玉石</dd>
+									</dl>
+								</a>
+								<a href="category5.html">
+									<dl>
+										<dt><img src="{% static "img/nav26.jpg" %}"/></dt>
+										<dd>花瓶</dd>
+									</dl>
+								</a>
+								<a href="category5.html">
+									<dl>
+										<dt><img src="{% static "img/nav27.jpg" %}"/></dt>
+										<dd>手表</dd>
+									</dl>
+								</a>
+								<a href="category5.html">
+									<dl>
+										<dt><img src="{% static "img/nav28.jpg" %}"/></dt>
+										<dd>项链</dd>
+									</dl>
+								</a>
+								<a href="category5.html">
+									<dl>
+										<dt><img src="{% static "img/nav29.jpg" %}"/></dt>
+										<dd>戒指</dd>
+									</dl>
+								</a>
+                                <a href="category5.html">
+									<dl>
+										<dt><img src="{% static "img/nav30.jpg" %}"/></dt>
+										<dd>礼盒</dd>
+									</dl>
+								</a>
+							</div>
+						</div>
+
+
+                    </li>
+
+
+					<li><a href="category6.html">学习用品</a>
+                        <div class="sList">
+							<div class="wrapper  clearfix">
+								<a href="category6.html">
+									<dl>
+										<dt><img src="{% static "img/nav31.jpg" %}"/></dt>
+										<dd>笔</dd>
+									</dl>
+								</a>
+								<a href="category6.html">
+									<dl>
+										<dt><img src="{% static "img/nav32.jpg" %}"/></dt>
+										<dd>纸本</dd>
+									</dl>
+								</a>
+								<a href="category6.html">
+									<dl>
+										<dt><img src="{% static "img/nav33.jpg" %}"/></dt>
+										<dd>用具</dd>
+									</dl>
+								</a>
+								<a href="category6.html">
+									<dl>
+										<dt><img src="{% static "img/nav34.jpg" %}"/></dt>
+										<dd>台灯</dd>
+									</dl>
+								</a>
+								<a href="category6.html">
+									<dl>
+										<dt><img src="{% static "img/nav35.jpg" %}"/></dt>
+										<dd>无</dd>
+									</dl>
+								</a>
+                                <a href="category6.html">
+									<dl>
+										<dt><img src="{% static "img/nav35.jpg" %}"/></dt>
+										<dd>无</dd>
+									</dl>
+								</a>
+							</div>
+						</div>
+
+                    </li>
+                    <li><a href="category7.html">我的商店</a>
+                        <div class="sList">
+							<div class="wrapper  clearfix">
+                                <a href="category7.html">
+									<dl>
+{#										<dt><img src="{% static "img/nav35.jpg" %}"/></dt>#}
+										<dd>无</dd>
+									</dl>
+								</a>
+							</div>
+						</div>
+                    </li>
+				</ul>
+
+
+
+			</div>
+		</div>
+
+
+		<!-----------------address------------------------------->
+		<div class="address">
+			<div class="wrapper clearfix">
+				<a href="index.html">首页</a>
+				<span>/</span>
+				<a href="category1.html">食品</a>
+				<span>/</span>
+				<a href="proDetail2.html" class="on">三只松鼠大礼包</a>
+			</div>
+		</div>
+
+
+		<!-----------------------Detail------------------------------>
+		<div class="detCon">
+			<div class="proDet wrapper">
+				<div class="proCon clearfix">
+					<div class="proImg fl">
+						<img class="det" src="{% static "img/pro1.jpg" %}"/>
+						<div class="smallImg clearfix">
+							<img src="{% static "img/temp/proDet01.jpg"%}" data-src="{% static "img/temp/proDet01_big.jpg"%}">
+							<img src="{% static "img/temp/proDet02.jpg"%}" data-src="{% static "img/temp/proDet02_big.jpg"%}">
+							<img src="{% static "img/temp/proDet03.jpg" %}" data-src="{% static "img/temp/proDet03_big.jpg"%}">
+							<img src="{% static "img/temp/proDet04.jpg"%}" data-src="{% static "mg/temp/proDet04_big.jpg"%}">
+						</div>
+					</div>
+					<div class="fr intro">
+						<div class="title">
+							<h4>三只松鼠大礼包</h4>
+							<p>【零食中秋礼物送女友混合干果礼盒榛子腰果巴旦木葡萄干核桃开心果 750g/30袋</p>
+							<span>￥159.90</span>
+						</div>
+						<div class="proIntro">
+							<p>颜色分类</p>
+							<div class="smallImg clearfix categ">
+								<p class="fl"><img src="{% static "img/temp/prosmall01.jpg" %}" alt="白瓷花瓶+20支快乐花" data-src="{% static "img/temp/proBig01.jpg"%}"></p>
+								<p class="fl"><img src="{% static "img/temp/prosmall02.jpg" %}" alt="白瓷花瓶+20支兔尾巴草" data-src="{% static "img/temp/proBig02.jpg"%}"></p>
+								<p class="fl"><img src="{% static "img/temp/prosmall03.jpg" %}"alt="20支快乐花" data-src="{% static "img/temp/proBig03.jpg"%}"></p>
+								<p class="fl"><img src="{% static "img/temp/prosmall04.jpg" %}" alt="20支兔尾巴草" data-src="{% static "img/temp/proBig04.jpg"%}"></p>
+							</div>
+							<p>数量&nbsp;&nbsp;库存<span>2096</span>件</p>
+							<div class="num clearfix">
+								<img class="fl sub" src="{% static "img/temp/sub.jpg"%}">
+								<span class="fl" contentEditable="true">1</span>
+								<img class="fl add" src="{% static "img/temp/add.jpg"%}">
+								<p class="please fl">请选择商品属性!</p>
+							</div>
+						</div>
+
+                        <form action="add_item" method="post">
+                            {% csrf_token %}
+						<div class="btns clearfix">
+                            <input type="hidden" name="item_name" value="坚果">
+                            <input type="hidden" name="item_price" value="5999">
+                            <input type="hidden" name="item_number" value="20">
+{#                            <input type="hidden" name="item_" value="1">#}
+
+
+{#							<a href="#2"><p class="buy fl" ><input type="submit" value="立即购买">    </p></a>#}
+							<a href="#2"><p class="cart fr"><input type="submit"  value="加入购物车 ">  </p></a>
+						</div>
+                        </form>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="introMsg wrapper clearfix">
+			<div class="msgL fl">
+				<div class="msgTit clearfix">
+					<a class="on">商品详情</a>
+					<a>所有评价</a>
+				</div>
+				<div class="msgAll">
+					<div class="msgImgs">
+						<img src="{% static "img/temp/det01.jpg"%}">
+						<img src="{% static "img/temp/det02.jpg"%}">
+                        <img src="{% static "img/temp/det03.jpg"%}">
+                        <img src="{% static "img/temp/det04.jpg"%}">
+                        <img src="{% static "img/temp/det05.jpg"%}">
+                        <img src="{% static "img/temp/det06.jpg"%}">
+                        <img src="{% static "img/temp/det07.jpg"%}">
+					</div>
+					<div class="eva">
+						<div class="per clearfix">
+							<img class="fl" src="img/temp/per01.jpg">
+							<div class="perR fl">
+								<p>馨***呀</p>
+								<p>不好意思评价晚了，产品很好，价格比玻璃品便宜，没有我担心的杂色，发货快，包装好，全5分</p>
+								<div class="clearfix">
+									<p><img src="{% static "img/temp/eva01.jpg"%}"></p>
+                                    <p><img src="{% static "img/temp/eva02.jpg"%}"></p>
+                                    <p><img src="{% static "img/temp/eva03.jpg"%}"></p>
+                                    <p><img src="{% static "img/temp/eva04.jpg"%}"></p>
+                                    <p><img src="{% static "img/temp/eva05.jpg"%}"></p>
+								</div>
+								<p><span>2016年12月27日08:31</span><span>颜色分类：大中小三件套（不含花）</span></p>
+							</div>
+						</div>
+						<div class="per clearfix">
+							<img class="fl" src="{% static "img/temp/per02.jpg"%}">
+							<div class="perR fl">
+								<p>么***周</p>
+								<p>花瓶超级棒，我看图以为是光面的，收货发现是磨砂，但感觉也超有质感，很喜欢。磨砂上面还有点纹路，不过觉得挺自然的，不影响美观。包装也很好，绝对不会磕碎碰坏，好评！</p>
+								<p><span>2016年12月27日08:31</span><span>颜色分类：大中小三件套（不含花）</span></p>
+							</div>
+						</div>
+						<div class="per clearfix">
+							<img class="fl" src="img/temp/per01.jpg">
+							<div class="perR fl">
+								<p>馨***呀</p>
+								<p>不好意思评价晚了，产品很好，价格比玻璃品便宜，没有我担心的杂色，发货快，包装好，全5分</p>
+								<div class="clearfix">
+									<p><img src="{% static "img/temp/eva01.jpg"%}"></p>
+                                    <p><img src="{% static "img/temp/eva02.jpg"%}"></p>
+                                    <p><img src="{% static "img/temp/eva03.jpg"%}"></p>
+                                    <p><img src="{% static "img/temp/eva04.jpg"%}"></p>
+                                    <p><img src="{% static "img/temp/eva05.jpg"%}"></p>
+								</div>
+								<p><span>2016年12月27日08:31</span><span>颜色分类：大中小三件套（不含花）</span></p>
+							</div>
+						</div>
+						<div class="per clearfix">
+							<img class="fl" src="img/temp/per02.jpg">
+							<div class="perR fl">
+								<p>么***周</p>
+								<p>花瓶超级棒，我看图以为是光面的，收货发现是磨砂，但感觉也超有质感，很喜欢。磨砂上面还有点纹路，不过觉得挺自然的，不影响美观。包装也很好，绝对不会磕碎碰坏，好评！</p>
+								<p><span>2016年12月27日08:31</span><span>颜色分类：大中小三件套（不含花）</span></p>
+							</div>
+						</div>
+						<div class="per clearfix">
+							<img class="fl" src="{% static "img/temp/per01.jpg"%}">
+							<div class="perR fl">
+								<p>馨***呀</p>
+								<p>不好意思评价晚了，产品很好，价格比玻璃品便宜，没有我担心的杂色，发货快，包装好，全5分</p>
+								<div class="clearfix">
+									<p><img src="{% static "img/temp/eva01.jpg"%}"></p>
+                                    <p><img src="{% static "img/temp/eva02.jpg"%}"></p>
+                                    <p><img src="{% static "img/temp/eva03.jpg"%}"></p>
+                                    <p><img src="{% static "img/temp/eva04.jpg"%}"></p>
+                                    <p><img src="{% static "img/temp/eva05.jpg"%}"></p>
+								</div>
+								<p><span>2016年12月27日08:31</span><span>颜色分类：大中小三件套（不含花）</span></p>
+							</div>
+						</div>
+						<div class="per clearfix">
+							<img class="fl" src="{% static "img/temp/per02.jpg"%}">
+							<div class="perR fl">
+								<p>么***周</p>
+								<p>花瓶超级棒，我看图以为是光面的，收货发现是磨砂，但感觉也超有质感，很喜欢。磨砂上面还有点纹路，不过觉得挺自然的，不影响美观。包装也很好，绝对不会磕碎碰坏，好评！</p>
+								<p><span>2016年12月27日08:31</span><span>颜色分类：大中小三件套（不含花）</span></p>
+							</div>
+						</div>
+						<div class="per clearfix">
+							<img class="fl" src="img/temp/per01.jpg">
+							<div class="perR fl">
+								<p>馨***呀</p>
+								<p>不好意思评价晚了，产品很好，价格比玻璃品便宜，没有我担心的杂色，发货快，包装好，全5分</p>
+								<div class="clearfix">
+									<p><img src="{% static "img/temp/eva01.jpg"%}"></p>
+                                    <p><img src="{% static "img/temp/eva02.jpg"%}"></p>
+                                    <p><img src="{% static "img/temp/eva03.jpg"%}"></p>
+                                    <p><img src="{% static "img/temp/eva04.jpg"%}"></p>
+                                    <p><img src="{% static "img/temp/eva05.jpg"%}"></p>
+								</div>
+								<p><span>2016年12月27日08:31</span><span>颜色分类：大中小三件套（不含花）</span></p>
+							</div>
+						</div>
+						<div class="per clearfix">
+							<img class="fl" src="{% static "img/temp/per02.jpg"%}">
+							<div class="perR fl">
+								<p>么***周</p>
+								<p>花瓶超级棒，我看图以为是光面的，收货发现是磨砂，但感觉也超有质感，很喜欢。磨砂上面还有点纹路，不过觉得挺自然的，不影响美观。包装也很好，绝对不会磕碎碰坏，好评！</p>
+								<p><span>2016年12月27日08:31</span><span>颜色分类：大中小三件套（不含花）</span></p>
+							</div>
+						</div>
+						<div class="per clearfix">
+							<img class="fl" src="{% static "img/temp/per01.jpg"%}">
+							<div class="perR fl">
+								<p>馨***呀</p>
+								<p>不好意思评价晚了，产品很好，价格比玻璃品便宜，没有我担心的杂色，发货快，包装好，全5分</p>
+								<div class="clearfix">
+									<p><img src="{% static "img/temp/eva01.jpg"%}"></p>
+                                    <p><img src="{% static "img/temp/eva02.jpg"%}"></p>
+                                    <p><img src="{% static "img/temp/eva03.jpg"%}"></p>
+                                    <p><img src="{% static "img/temp/eva04.jpg"%}"></p>
+                                    <p><img src="{% static "img/temp/eva05.jpg"%}"></p>
+								</div>
+								<p><span>2016年12月27日08:31</span><span>颜色分类：大中小三件套（不含花）</span></p>
+							</div>
+						</div>
+						<div class="per clearfix">
+							<img class="fl" src="{% static "img/temp/per02.jpg"%}">
+							<div class="perR fl">
+								<p>么***周</p>
+								<p>花瓶超级棒，我看图以为是光面的，收货发现是磨砂，但感觉也超有质感，很喜欢。磨砂上面还有点纹路，不过觉得挺自然的，不影响美观。包装也很好，绝对不会磕碎碰坏，好评！</p>
+								<p><span>2016年12月27日08:31</span><span>颜色分类：大中小三件套（不含花）</span></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="msgR fr">
+				<h4>为你推荐</h4>
+				<div class="seeList">
+					<a href="#">
+						<dl>
+							<dt><img src="{% static "img/temp/see01.jpg"%}"</dt>
+							<dd>【最家】复古文艺风玻璃花瓶</dd>
+							<dd>￥193.20</dd>
+						</dl>
+					</a>
+					<a href="#">
+						<dl>
+							<dt><img src="{% static "img/temp/see02.jpg"%}"></dt>
+							<dd>【最家】复古文艺风玻璃花瓶</dd>
+							<dd>￥193.20</dd>
+						</dl>
+					</a>
+					<a href="#">
+						<dl>
+							<dt><img src="{% static "img/temp/see03.jpg"%}"></dt>
+							<dd>【最家】复古文艺风玻璃花瓶</dd>
+							<dd>￥193.20</dd>
+						</dl>
+					</a>
+					<a href="#">
+						<dl>
+							<dt><img src="{% static "img/temp/see04.jpg"%}"></dt>
+							<dd>【最家】复古文艺风玻璃花瓶</dd>
+							<dd>￥193.20</dd>
+						</dl>
+					</a>
+				</div>
+
+			</div>
+		</div>
+		<div class="like">
+			<h4>猜你喜欢</h4>
+			<div class="bottom">
+				<div class="hd">
+					<span class="prev"><img src="{% static "img/temp/prev.png"%}"></span>
+					<span class="next"><img src="{% static "img/temp/next.png"%}"></span>
+				</div>
+				<div class="imgCon bd">
+					<div class="likeList clearfix">
+						<div>
+							<a href="proDetail.html">
+								<dl>
+									<dt><img src="{% static "img/temp/like01.jpg"%}"></dt>
+									<dd>【最家】复古文艺风玻璃花瓶</dd>
+									<dd>￥193.20</dd>
+								</dl>
+							</a>
+							<a href="proDetail.html">
+								<dl>
+									<dt><img src="{% static "img/temp/like02.jpg"%}"></dt>
+									<dd>【最家】复古文艺风玻璃花瓶</dd>
+									<dd>￥193.20</dd>
+								</dl>
+							</a>
+							<a href="proDetail.html">
+								<dl>
+									<dt><img src="{% static "img/temp/like03.jpg"%}"></dt>
+									<dd>【最家】复古文艺风玻璃花瓶</dd>
+									<dd>￥193.20</dd>
+								</dl>
+							</a>
+							<a href="proDetail.html">
+								<dl>
+									<dt><img src="{% static "img/temp/like04.jpg"%}"></dt>
+									<dd>【最家】复古文艺风玻璃花瓶</dd>
+									<dd>￥193.20</dd>
+								</dl>
+							</a>
+							<a href="proDetail.html" class="last">
+								<dl>
+									<dt><img src="{% static "img/temp/like05.jpg"%}"></dt>
+									<dd>【最家】复古文艺风玻璃花瓶</dd>
+									<dd>￥193.20</dd>
+								</dl>
+							</a>
+						</div>
+						<div>
+							<a href="proDetail.html">
+								<dl>
+									<dt><img src="{% static "img/temp/like01.jpg"%}"></dt>
+									<dd>【最家】复古文艺风玻璃花瓶</dd>
+									<dd>￥193.20</dd>
+								</dl>
+							</a>
+							<a href="proDetail.html">
+								<dl>
+									<dt><img src="{% static "img/temp/like02.jpg"%}"></dt>
+									<dd>【最家】复古文艺风玻璃花瓶</dd>
+									<dd>￥193.20</dd>
+								</dl>
+							</a>
+							<a href="proDetail.html">
+								<dl>
+									<dt><img src="{% static "img/temp/like03.jpg"%}"></dt>
+									<dd>【最家】复古文艺风玻璃花瓶</dd>
+									<dd>￥193.20</dd>
+								</dl>
+							</a>
+							<a href="proDetail.html">
+								<dl>
+									<dt><img src="{% static "img/temp/like04.jpg"%}"></dt>
+									<dd>【最家】复古文艺风玻璃花瓶</dd>
+									<dd>￥193.20</dd>
+								</dl>
+							</a>
+							<a href="proDetail.html" class="last">
+								<dl>
+									<dt><img src="{% static "img/temp/like05.jpg"%}"></dt>
+									<dd>【最家】复古文艺风玻璃花瓶</dd>
+									<dd>￥193.20</dd>
+								</dl>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--返回顶部-->
+		<div class="gotop">
+			<a href="my_cart.html">
+			<dl class="goCart">
+				<dt><img src="{% static "img/gt1.png" %}"/></dt>
+				<dd>去购<br />物车</dd>
+				<span>1</span>
+			</dl>
+			</a>
+			<a href="#" class="dh">
+			<dl>
+				<dt><img src="{% static "img/gt2.png" %}"/></dt>
+				<dd>联系<br />客服</dd>
+			</dl>
+			</a>
+			<a href="my_account.html">
+			<dl>
+				<dt><img src="{% static "img/gt3.png" %}"/></dt>
+				<dd>个人<br />中心</dd>
+			</dl>
+			</a>
+			<a href="#" class="toptop" style="display: none;">
+			<dl>
+				<dt><img src="{% static "img/gt4.png" %}"/></dt>
+				<dd>返回<br />顶部</dd>
+			</dl>
+			</a>
+			<p>13503210201</p>
+		</div>
+		<div class="msk"></div>
+		<!--footer-->
+		<div class="footer">
+			<div class="top">
+				<div class="wrapper">
+					<div class="clearfix">
+						<a href="#2" class="fl"><img src="{% static "img/foot1.png" %}"/></a>
+						<span class="fl">7天无理由退货</span>
+					</div>
+					<div class="clearfix">
+						<a href="#2" class="fl"><img src="{% static "img/foot2.png" %}"/></a>
+						<span class="fl">15天免费换货</span>
+					</div>
+					<div class="clearfix">
+						<a href="#2" class="fl"><img src="{% static "img/foot3.png" %}"/></a>
+						<span class="fl">满99包邮</span>
+					</div>
+					<div class="clearfix">
+						<a href="#2" class="fl"><img src="{% static "img/foot4.png" %}"/></a>
+						<span class="fl">联系我们</span>
+					</div>
+				</div>
+			</div>
+			<p class="dibu">北洋-WalMart | Designed by Me.</p>
+		</div>
+		<script src="{% static "js/jquery-1.12.4.min.js" %}" type="text/javascript" charset="utf-8"></script>
+		<script src="{% static "js/jquery.SuperSlide.2.1.1.js" %}" type="text/javascript" charset="utf-8"></script>
+		<script src="{% static "js/public.js" %}" type="text/javascript" charset="utf-8"></script>
+		<script src="{% static "js/nav.js" %}" type="text/javascript" charset="utf-8"></script>
+		<script src="{% static "js/pro.js" %}" type="text/javascript" charset="utf-8"></script>
+		<script src="{% static "js/cart.js" %}" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			jQuery(".bottom").slide({titCell:".hd ul",mainCell:".bd .likeList",autoPage:true,autoPlay:false,effect:"leftLoop",autoPlay:true,vis:1});
+		</script>
+	</body>
+</html>

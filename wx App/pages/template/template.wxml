@@ -1,0 +1,11 @@
+<template name="quantity">
+  <!-- 主容器 -->  
+  <view class="stepper">  
+      <!-- 减号 -->  
+      <text class="sign {{count <= 1 ? 'disabled' : 'normal'}}" bindtap="delCount" data-index="{{index}}">-</text>  
+      <!-- 数值 -->  
+      <input class="number" type="number" bindchange="bindManual" value="{{count}}"  disabled="disabled"/>  
+      <!-- 加号 -->  
+      <text class="sign {{count >= 10 ? 'disabled' : 'normal'}}" bindtap="addCount" data-index="{{index}}">+</text>  
+  </view>  
+</template>

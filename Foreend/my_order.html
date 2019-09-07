@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+	<head lang="en">
+		<meta charset="utf-8" />
+		<title>最家</title>
+		<link rel="stylesheet" type="text/css" href="{% static "css/public.css"%}"/>
+		<link rel="stylesheet" type="text/css" href="{% static "css/myorder.css" %}"/>
+	</head>
+	<body>
+		<!------------------------------head------------------------------>
+		<div class="head ding">
+			<div class="wrapper clearfix">
+				<div class="clearfix" id="top">
+					<h1 class="fl"><a href="index.html"><img src="{% static "img/logo.png" %}"/></a></h1>
+					<div class="fr clearfix" id="top1">
+						<p class="fl">
+                        {% for it in its %}
+                            <a href="#" >欢迎:</a>
+{#							<a href="login.html" id="login">登录</a>#}
+							<a href="#" id="reg" >{{ it.log_name }}</a>
+                        {% endfor %}
+						</p>
+						<form action="#" method="get" class="fl">
+							<input type="text" placeholder="Search" />
+							<input type="button" />
+						</form>
+						<div class="btn fl clearfix">
+							<a href="my_account.html"><img src="{% static "img/grzx.png" %}"/></a>
+							<a href="#" class="er1"><img src="{% static "img/ewm.png" %}"/></a>
+							<a href="my_cart.html"><img src="{% static "img/gwc.png" %}"/></a>
+							<p><a href="#"><img src="{% static "img/smewm.png" %}"/></a></p>
+						</div>
+					</div>
+                                            <form action="logout" method="post">
+                        {% csrf_token %}
+                         <h2><a href="#" ><strong><input type="submit" value="退出登录"></strong></a></h2>
+
+                        </form>
+				</div>
+
+
+				<ul class="clearfix" id="bott">
+					<li><a href="index.html">主页</a></li>
+					<li>
+						<a href="category1.html">食品</a>
+						<div class="sList">
+							<div class="wrapper  clearfix">
+								<a href="category1.html">
+									<dl>
+										<dt><img src="{% static "img/nav1.jpg" %}"/></dt>
+										<dd>饮品</dd>
+									</dl>
+								</a>
+								<a href="category1.html">
+									<dl>
+										<dt><img src="{% static "img/nav2.jpg" %}"/></dt>
+										<dd>水果</dd>
+									</dl>
+								</a>
+								<a href="category1.html">
+									<dl>
+										<dt><img src="{% static "img/nav3.jpg" %}"/></dt>
+										<dd>坚果</dd>
+									</dl>
+								</a>
+								<a href="category1.html">
+									<dl>
+										<dt><img src="{% static "img/nav4.jpg" %}"/></dt>
+										<dd>糕点</dd>
+									</dl>
+								</a>
+								<a href="category1.html">
+									<dl>
+										<dt><img src="{% static "img/nav5.jpg" %}"/></dt>
+										<dd>零食</dd>
+									</dl>
+								</a>
+                                <a href="category1.html">
+									<dl>
+										<dt><img src="{% static "img/nav6.jpg" %}"/></dt>
+										<dd>雪糕</dd>
+									</dl>
+								</a>
+							</div>
+						</div>
+					</li>
+
+
+					<li>
+						<a href="category2.html">服装护理</a>
+						<div class="sList">
+							<div class="wrapper  clearfix">
+								<a href="category2.html">
+									<dl>
+										<dt><img src="{% static "img/nav7.jpg" %}"/></dt>
+										<dd>男装</dd>
+									</dl>
+								</a>
+								<a href="category2.html">
+									<dl>
+										<dt><img src="{% static "img/nav8.jpg" %}"/></dt>
+										<dd>男鞋</dd>
+									</dl>
+								</a>
+                                <a href="category2.html">
+									<dl>
+										<dt><img src="{% static "img/nav9.jpg" %}"/></dt>
+										<dd>女装</dd>
+									</dl>
+								</a>
+                                <a href="category2.html">
+									<dl>
+										<dt><img src="{% static "img/nav10.jpg" %}"/></dt>
+										<dd>女鞋</dd>
+									</dl>
+								</a>
+                                <a href="category2.html">
+									<dl>
+										<dt><img src="{% static "img/nav11.jpg" %}"/></dt>
+										<dd>香水</dd>
+									</dl>
+								</a>
+                                <a href="category2.html">
+									<dl>
+										<dt><img src="{% static "img/nav12.jpg" %}"/></dt>
+										<dd>口红</dd>
+									</dl>
+								</a>
+
+							</div>
+						</div>
+					</li>
+
+
+					<li>
+						<a href="category3.html">家居日用</a>
+						<div class="sList">
+							<div class="wrapper  clearfix">
+								<a href="category3.html">
+									<dl>
+										<dt><img src="{% static "img/nav13.jpg" %}"/></dt>
+										<dd>家居摆件</dd>
+									</dl>
+								</a>
+								<a href="category3.html">
+									<dl>
+										<dt><img src="{% static "img/nav14.jpg" %}"/></dt>
+										<dd>壁画</dd>
+									</dl>
+								</a>
+								<a href="category3.html">
+									<dl>
+										<dt><img src="{% static "img/nav15.jpg" %}"/></dt>
+										<dd>沐浴</dd>
+									</dl>
+								</a>
+								<a href="category3.html">
+									<dl>
+										<dt><img src="{% static "img/nav16.jpg" %}"/></dt>
+										<dd>护发</dd>
+									</dl>
+								</a>
+								<a href="category3.html">
+									<dl>
+										<dt><img src="{% static "img/nav17.jpg" %}"/></dt>
+										<dd>洗漱</dd>
+									</dl>
+								</a>
+                                <a href="category3.html">
+									<dl>
+										<dt><img src="{% static "img/nav18.jpg" %}"/></dt>
+										<dd>纸巾</dd>
+									</dl>
+								</a>
+							</div>
+						</div>
+					</li>
+
+
+					<li><a href="category4.html">科技产品</a>
+                        <div class="sList">
+							<div class="wrapper  clearfix">
+								<a href="category4.html">
+									<dl>
+										<dt><img src="{% static "img/nav19.jpg" %}"/></dt>
+										<dd>手机</dd>
+									</dl>
+								</a>
+								<a href="category4.html">
+									<dl>
+										<dt><img src="{% static "img/nav20.jpg" %}"/></dt>
+										<dd>平板</dd>
+									</dl>
+								</a>
+								<a href="category4.html">
+									<dl>
+										<dt><img src="{% static "img/nav21.jpg" %}"/></dt>
+										<dd>电脑</dd>
+									</dl>
+								</a>
+								<a href="category4.html">
+									<dl>
+										<dt><img src="{% static "img/nav22.jpg" %}"/></dt>
+										<dd>摄影</dd>
+									</dl>
+								</a>
+								<a href="category4.html">
+									<dl>
+										<dt><img src="{% static "img/nav23.jpg" %}"/></dt>
+										<dd>无人机</dd>
+									</dl>
+								</a>
+                                <a href="category4.html">
+									<dl>
+										<dt><img src="{% static "img/nav24.jpg" %}"/></dt>
+										<dd>智能穿戴</dd>
+									</dl>
+								</a>
+							</div>
+						</div>
+
+
+                    </li>
+
+
+					<li><a href="category5.html">创意礼品</a>
+                        <div class="sList">
+							<div class="wrapper  clearfix">
+								<a href="category5.html">
+									<dl>
+										<dt><img src="{% static "img/nav25.jpg" %}"/></dt>
+										<dd>玉石</dd>
+									</dl>
+								</a>
+								<a href="category5.html">
+									<dl>
+										<dt><img src="{% static "img/nav26.jpg" %}"/></dt>
+										<dd>花瓶</dd>
+									</dl>
+								</a>
+								<a href="category5.html">
+									<dl>
+										<dt><img src="{% static "img/nav27.jpg" %}"/></dt>
+										<dd>手表</dd>
+									</dl>
+								</a>
+								<a href="category5.html">
+									<dl>
+										<dt><img src="{% static "img/nav28.jpg" %}"/></dt>
+										<dd>项链</dd>
+									</dl>
+								</a>
+								<a href="category5.html">
+									<dl>
+										<dt><img src="{% static "img/nav29.jpg" %}"/></dt>
+										<dd>戒指</dd>
+									</dl>
+								</a>
+                                <a href="category5.html">
+									<dl>
+										<dt><img src="{% static "img/nav30.jpg" %}"/></dt>
+										<dd>礼盒</dd>
+									</dl>
+								</a>
+							</div>
+						</div>
+
+
+                    </li>
+
+
+					<li><a href="category6.html">学习用品</a>
+                        <div class="sList">
+							<div class="wrapper  clearfix">
+								<a href="category6.html">
+									<dl>
+										<dt><img src="{% static "img/nav31.jpg" %}"/></dt>
+										<dd>笔</dd>
+									</dl>
+								</a>
+								<a href="category6.html">
+									<dl>
+										<dt><img src="{% static "img/nav32.jpg" %}"/></dt>
+										<dd>纸本</dd>
+									</dl>
+								</a>
+								<a href="category6.html">
+									<dl>
+										<dt><img src="{% static "img/nav33.jpg" %}"/></dt>
+										<dd>用具</dd>
+									</dl>
+								</a>
+								<a href="category6.html">
+									<dl>
+										<dt><img src="{% static "img/nav34.jpg" %}"/></dt>
+										<dd>台灯</dd>
+									</dl>
+								</a>
+								<a href="category6.html">
+									<dl>
+										<dt><img src="{% static "img/nav35.jpg" %}"/></dt>
+										<dd>无</dd>
+									</dl>
+								</a>
+                                <a href="category6.html">
+									<dl>
+										<dt><img src="{% static "img/nav35.jpg" %}"/></dt>
+										<dd>无</dd>
+									</dl>
+								</a>
+							</div>
+						</div>
+
+                    </li>
+                    <li><a href="category7.html">我的商店</a>
+                        <div class="sList">
+							<div class="wrapper  clearfix">
+                                <a href="category7.html">
+									<dl>
+{#										<dt><img src="{% static "img/nav35.jpg" %}"/></dt>#}
+										<dd>无</dd>
+									</dl>
+								</a>
+							</div>
+						</div>
+                    </li>
+				</ul>
+			</div>
+		</div>
+		<!------------------------------idea------------------------------>
+		<div class="address mt">
+			<div class="wrapper clearfix">
+				<a href="#" class="fl">首页</a>
+				<span>/</span>
+				<a href="my_account.html">个人中心</a>
+				<span>/</span>
+				<a href="my_order.html" class="on">我的订单</a>
+			</div>
+		</div>
+
+		<!------------------------------Bott------------------------------>
+		<div class="Bott">
+			<div class="wrapper clearfix">
+				<div class="zuo fl">
+					<h3>
+                        {% for it in its %}
+						<a href="my_account.html"><img src="{% static "img/tx.png" %}"/></a>
+                            <p class="clearfix"><a href="my_account.html"><span class="fl">{{ it.log_name }}</span></a><span class="fr">[退出登录]</span></p>
+					    {% endfor %}
+                    </h3>
+					<div>
+                <h4>我的交易</h4>
+                <ul>
+                    <li><a href="my_cart.html">我的购物车</a></li>
+                    <li class="on"><a href="my_order.html">我的订单</a></li>
+                    <li><a href="my_comment.html">评价晒单</a></li>
+                </ul>
+                <h4>个人中心</h4>
+                <ul>
+                    <li><a href="my_account.html">我的中心</a></li>
+                    <li><a href="address.html">地址管理</a></li>
+                </ul>
+                <h4>账户管理</h4>
+                <ul>
+                    <li><a href="my_detail.html">编辑资料</a></li>
+                    <li><a href="my_change.html">修改密码</a></li>
+                </ul>
+                <h4>我的商店</h4>
+                 <ul>
+                    <li ><a href="opened_store.html">开通商店</a></li>
+                    <li ><a href="my_store.html">上架商品</a></li>
+                </ul>
+            </div>
+				</div>
+
+
+
+                <div class="you fl">
+					<div class="my clearfix">
+						<h2 class="fl">我的订单</h2>
+						<a href="#" class="fl">联系我</a>
+					</div>
+
+
+
+                    <div class="dlist clearfix">
+						<ul class="fl clearfix" id="wa">
+							<li class="on"><a href="#2">全部有效订单</a></li>
+							<li><a href="#2">待支付</a></li>
+							<li><a href="#2l">待收货</a></li>
+							<li><a href="#2">已关闭</a></li>
+						</ul>
+						<form action="#" method="get" class="fr clearfix">
+							<input type="text" name="" id="" value="" placeholder="请输入商品名称、订单号" />
+							<input type="button" name="" id="" value="" />
+						</form>
+					</div>
+
+
+                    {% for it in items %}
+                    <div class="dkuang">
+						<p class="one">已收货</p>
+
+{#                        <div class="word clearfix">#}
+{#							<ul class="fl clearfix">#}
+{#								<li>2019年9月8日 18:53</li>#}
+{#								<li>hhh</li>#}
+{#								<li>订单号:5160513358520018</li>#}
+{#								<li>在线支付</li>#}
+{#							</ul>#}
+{#							<p class="fr">订单金额：<span>99.00</span>元</p>#}
+{#						</div>#}
+
+                        <div class="shohou clearfix">
+							<a href="#" class="fl"><img src="{% static "img/g1.jpg"%}"/></a>
+
+							<p class="fl"><a href="#">{{ it.item_name }}</a><a href="#">¥{{ it.item_price }}</a></p>
+							<p class="fr">
+								<a href="my_comment.html">待评价</a>
+								<a href="my_order.html">订单详情</a>
+							</p>
+						</div>
+					</div>
+                    {% endfor %}
+
+{#                    <div class="dkuang">#}
+{#						<p class="one">已收货</p>#}
+{##}
+{#                        <div class="word clearfix">#}
+{#							<ul class="fl clearfix">#}
+{#								<li>2016年12月1日 18:53</li>#}
+{#								<li>杨小黄</li>#}
+{#								<li>订单号:5160513358520018</li>#}
+{#								<li>在线支付</li>#}
+{#							</ul>#}
+{#							<p class="fr">订单金额：<span>99.00</span>元</p>#}
+{#						</div>#}
+{##}
+{#                        <div class="shohou clearfix">#}
+{#							<a href="#" class="fl"><img src="{% static "img/g1.jpg"%}"/></a>#}
+{##}
+{#							<p class="fl"><a href="#">家用创意菜盘子圆盘 釉下彩复古</a><a href="#">¥99.00×1</a></p>#}
+{#							<p class="fr">#}
+{#								<a href="my_comment.html">待评价</a>#}
+{#								<a href="my_order.html">订单详情</a>#}
+{#							</p>#}
+{#						</div>#}
+{#					</div>#}
+
+
+{#					<div class="dkuang clearfix deng">#}
+{#						<p class="one fl">待收货</p>#}
+{#						<div  class="clearfix">#}
+{#							<div class="fl vewwl">#}
+{#								<a href="wuliu.html" class="ckwl">查看物流</a>#}
+{#								<div class="wuliu">#}
+{#									<h4>圆通速递：858888888888888</h4>#}
+{#									<ul>#}
+{#										<li>#}
+{#											<p>妥投投递并签收，已签收。签收人：本人签收</p>#}
+{#											<p>2016-12-03 17:30:00</p>#}
+{#										</li>#}
+{#										<li>#}
+{#											<p>深圳市南油速递营销部安排投递（投递员姓名：六六六。联系电话：14243452522;</p>#}
+{#											<p>2016-12-03 08:50:00</p>#}
+{#										</li>#}
+{#										<li>#}
+{#											<p>到达广东省邮政速递物流有限公司深圳航空邮件处理中心处理中心（经转）</p>#}
+{#											<p>2016-12-03 02:20:00</p>#}
+{#										</li>#}
+{#										<li>以上为最新跟踪信息<a href="wuliu.html">查看全部</a></li>#}
+{#									</ul>#}
+{#								</div>#}
+{#							</div>#}
+{#						</div>#}
+{#						<div class="word clearfix">#}
+{#							<ul class="fl clearfix">#}
+{#								<li>2016年12月1日 18:53</li>#}
+{#								<li>杨小黄</li>#}
+{#								<li>订单号:5160513358520018</li>#}
+{#								<li>在线支付</li>#}
+{#							</ul>#}
+{#							<p class="fr">订单金额：<span>99.00</span>元</p>#}
+{#						</div>#}
+{#						<div class="shohou clearfix">#}
+{#							<a href="#" class="fl"><img src="{% static "img/g1.jpg" %}"/></a>#}
+{#							<p class="fl"><a href="#">家用创意菜盘子圆盘 釉下彩复古</a><a href="#">¥99.00×1</a></p>#}
+{#							<p class="fr">#}
+{#								<a href="#">确认收货</a>#}
+{#								<a href="orderxq.html">订单详情</a>#}
+{#							</p>#}
+{#						</div>#}
+{#					</div>#}
+{#					<div class="dkuang deng">#}
+{#						<p class="one">待支付</p>#}
+{#						<div class="word clearfix">#}
+{#							<ul class="fl clearfix">#}
+{#								<li>2016年12月1日 18:53</li>#}
+{#								<li>杨小黄</li>#}
+{#								<li>订单号:5160513358520018</li>#}
+{#								<li>在线支付</li>#}
+{#							</ul>#}
+{#							<p class="fr">订单金额：<span>99.00</span>元</p>#}
+{#						</div>#}
+{#						<div class="shohou clearfix">#}
+{#							<a href="#" class="fl"><img src="{% static "img/g1.jpg"%}"/></a>#}
+{#							<p class="fl"><a href="#">家用创意菜盘子圆盘 釉下彩复古</a><a href="#">¥99.00×1</a></p>#}
+{#							<p class="fr">#}
+{#								<a href="#">立即支付</a>#}
+{#								<a href="orderxq.html">订单详情</a>#}
+{#							</p>#}
+{#						</div>#}
+{#					</div>#}
+{#					<div class="dkuang">#}
+{#						<p class="one">已关闭</p>#}
+{#						<div class="word clearfix">#}
+{#							<ul class="fl clearfix">#}
+{#								<li>2016年12月1日 18:53</li>#}
+{#								<li>杨小黄</li>#}
+{#								<li>订单号:5160513358520018</li>#}
+{#								<li>在线支付</li>#}
+{#							</ul>#}
+{#							<p class="fr">订单金额：<span>99.00</span>元</p>#}
+{#						</div>#}
+{#						<div class="shohou clearfix">#}
+{#							<a href="#" class="fl"><img src="{% static "img/g1.jpg"%}"/></a>#}
+{#							<p class="fl"><a href="#">家用创意菜盘子圆盘 釉下彩复古</a><a href="#">¥99.00×1</a></p>#}
+{#							<p class="fr">#}
+{#								<a href="#">交易失败</a>#}
+{#								<a href="orderxq.html">订单详情</a>#}
+{#							</p>#}
+{#						</div>#}
+{#					</div>#}
+					<div class="fenye clearfix">
+						<a href="#"><img src="{% static "img/zuo.jpg"%}"/></a>
+						<a href="#">1</a>
+						<a href="#"><img src="{% static "img/you.jpg"%}"/></a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<!--返回顶部-->
+		<div class="gotop">
+			<a href="my_cart.html">
+			<dl class="goCart">
+				<dt><img src="{% static "img/gt1.png" %}"/></dt>
+				<dd>去购<br />物车</dd>
+				<span>1</span>
+			</dl>
+			</a>
+			<a href="#" class="dh">
+			<dl>
+				<dt><img src="{% static "img/gt2.png" %}"/></dt>
+				<dd>联系<br />客服</dd>
+			</dl>
+			</a>
+			<a href="my_account.html">
+			<dl>
+				<dt><img src="{% static "img/gt3.png" %}"/></dt>
+				<dd>个人<br />中心</dd>
+			</dl>
+			</a>
+			<a href="#" class="toptop" style="display: none;">
+			<dl>
+				<dt><img src="{% static "img/gt4.png" %}"/></dt>
+				<dd>返回<br />顶部</dd>
+			</dl>
+			</a>
+			<p>13503210201</p>
+		</div>
+		<div class="msk"></div>
+		<!--footer-->
+		<div class="footer">
+			<div class="top">
+				<div class="wrapper">
+					<div class="clearfix">
+						<a href="#2" class="fl"><img src="{% static "img/foot1.png" %}"/></a>
+						<span class="fl">7天无理由退货</span>
+					</div>
+					<div class="clearfix">
+						<a href="#2" class="fl"><img src="{% static "img/foot2.png" %}"/></a>
+						<span class="fl">15天免费换货</span>
+					</div>
+					<div class="clearfix">
+						<a href="#2" class="fl"><img src="{% static "img/foot3.png" %}"/></a>
+						<span class="fl">满99包邮</span>
+					</div>
+					<div class="clearfix">
+						<a href="#2" class="fl"><img src="{% static "img/foot4.png" %}"/></a>
+						<span class="fl">联系我们</span>
+					</div>
+				</div>
+			</div>
+			<p class="dibu">北洋-WalMart | Designed by Me.</p>
+		</div>
+		<script src="{% static "js/jquery-1.12.4.min.js" %}" type="text/javascript" charset="utf-8"></script>
+		<script src="{% static "js/public.js" %}" type="text/javascript" charset="utf-8"></script>
+		<script src="{% static "js/user.js" %}" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

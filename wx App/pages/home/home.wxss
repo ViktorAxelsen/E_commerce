@@ -1,0 +1,236 @@
+/* pages/home/home.wxss */
+page{  
+  display: flex;  
+  flex-direction: column;  
+  height: 100%;  
+}  
+ 
+.form {
+  position: relative;
+  height: 40px;
+}
+ 
+.searchInput {
+  border: 1px solid #2c3036;
+  height: 30px;
+  line-height: 40px;
+  font-size: 18px;
+  border-radius: 20px;
+  color: #bebec4;
+  padding-left: 35px;
+}
+.navbar{  
+  flex: none;  
+  display: flex;  
+  background: #fff;  
+}  
+.navbar .item{  
+  position: relative;  
+  flex: auto;  
+  text-align: center;  
+  line-height: 80rpx;  
+  font-size:14px;
+}  
+/* 顶部导航字体颜色 */
+.navbar .item.active{  
+  color: #ff0000;  
+}  
+/* 顶部指示条属性 */
+.navbar .item.active:after{  
+  content: "";  
+  display: block;  
+  position: absolute;  
+  bottom: 0;  
+  left: 0;  
+  right: 0;  
+  height: 6rpx;  
+  background: #ff0000;  
+}
+/* 直接设置swiper属性 */
+swiper {
+  height: 300rpx;
+}
+swiper-item image {
+  width: 100%;
+  height: 100%;
+}
+
+/*=================分类导航====================*/
+.navs {
+  display: flex; 
+  justify-content: left; 
+  flex-direction: row;
+  flex-wrap: wrap;  
+}
+.nav-item {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  flex-direction: column; 
+  /* padding: 20rpx; */
+  padding-top: 20rpx;
+}
+.nav-item .nav-image {
+  width: 80rpx;
+  height: 80rpx;
+  /* border-radius: 50%;设置边界圆角 */
+}
+.nav-item text {
+  padding-top: 20rpx;
+  font-size: 25rpx;
+}
+
+
+/*=================新品特卖 样式====================*/
+  .category-title {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20rpx;
+  margin-bottom: 0rpx;
+  padding: 0px 10px;
+  
+} 
+ .category-title .title{
+  font-size: 14px;
+  font-weight:900;
+} 
+
+.category-title .line_name{
+  font-size: 10px;
+  color: #98989f;
+  display: flex;
+  justify-content:space-between;
+
+} 
+/* 分割线 */
+.separate {
+  height: 15rpx;
+  background-color: #f2f2f2;
+}
+
+
+.category-title {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25rpx;
+  margin-bottom: 0rpx;
+}
+
+.category-title .name {
+  font-size: 40rpx;
+  text-align: center;
+  margin: 10rpx auto;
+}
+.line_flag {
+  width: 80rpx;
+  height: 1rpx;
+  display: inline-block;
+  margin: 20rpx auto;
+  background-color: gainsboro;
+  text-align: center;
+}
+.line {
+  width: 100%;
+  height: 2rpx;
+  display: inline-block;
+  margin: 20rpx 0rpx;
+  background-color: gainsboro;
+  text-align: center;
+}
+.head-img {
+  width: 100%;
+}
+.brand-name{
+  font-weight: 600; 
+  font-size: 32rpx;
+}  
+.activity-logo {
+  width:35rpx;
+  height:35rpx;
+  margin-right: 10rpx;
+  /* position: absolute; */
+}
+.pms{
+  font-size: 28rpx;
+  margin-bottom: 20rpx;
+  display: flex; 
+  justify-content: left; 
+  flex-direction: row;
+  color: #5771a8;
+} 
+
+/**=========福利专场============**/
+.welfares{
+  display: flex;
+  justify-content: left;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin:10px 5px;
+}
+.welfares-good{
+  /* height: 500rpx;  */
+  width: 47%;
+  margin:0px auto;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+  font-size: 24rpx;
+  /* border: 1px #eee solid;  */
+}
+.welfares-image{
+  width: 100%;
+  display: inline-block;
+  border: 1px #eee solid; 
+}
+.welfares-good .product-name{
+  color: #000;
+  /* height: 28px; */
+  text-align:left;
+   margin: 0px 5px; 
+   margin-bottom: 5px; 
+}
+.product-price-wrap{
+  height: 40rpx;
+}
+
+.product-price-wrap .product-price-new{
+  color: #e80080;
+  margin-left:5px;
+  font-weight:900;
+  font-size: 30rpx;
+}
+.product-price-wrap .product-price-old{
+  color: #888;
+  text-decoration: line-through;
+  padding-left: 2px;
+}
+.product-price-wrap .discount{
+  position: absolute;
+  right: 5px;
+  background-color: #000;
+  color: #fff;
+}
+/*  加载更多   */
+.weui-loading {
+  margin: 0 5px;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-animation: weuiLoading 1s steps(12, end) infinite;
+  animation: weuiLoading 1s steps(12, end) infinite;
+  background: transparent url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PHBhdGggZmlsbD0ibm9uZSIgZD0iTTAgMGgxMDB2MTAwSDB6Ii8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjRTlFOUU5IiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgLTMwKSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iIzk4OTY5NyIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgzMCAxMDUuOTggNjUpIi8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjOUI5OTlBIiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKDYwIDc1Ljk4IDY1KSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iI0EzQTFBMiIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSg5MCA2NSA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNBQkE5QUEiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoMTIwIDU4LjY2IDY1KSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iI0IyQjJCMiIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgxNTAgNTQuMDIgNjUpIi8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjQkFCOEI5IiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKDE4MCA1MCA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNDMkMwQzEiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTE1MCA0NS45OCA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNDQkNCQ0IiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTEyMCA0MS4zNCA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNEMkQyRDIiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTkwIDM1IDY1KSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iI0RBREFEQSIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgtNjAgMjQuMDIgNjUpIi8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjRTJFMkUyIiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKC0zMCAtNS45OCA2NSkiLz48L3N2Zz4=) no-repeat;
+  background-size: 100%;
+}
+.weui-loadmore {
+  width: 65%;
+  margin: 1.5em auto;
+  line-height: 1.6em;
+  font-size: 12px;
+  text-align: center;
+}
+.weui-loadmore__tips {
+  display: inline-block;
+  vertical-align: middle;
+  color: #888;
+}

@@ -1,0 +1,55 @@
+<!--pages/productReleased/productReleased.wxml-->
+<!--商品发布-->
+<form bindsubmit="upload">
+
+  
+   
+  
+  <!--上传图片-->
+  <view class='upImv'>
+    <view class='upImv_text'>缩略图片上传</view>
+    <view class="addImv">
+      <!--这个是已经选好的图片-->
+      <view wx:for="{{preview}}" wx:key="key" class="upFile" bindtap="showImagepreview" style="border-radius: 5px" data-id="{{index}}">
+        <image class="itemImv" src="{{item}}"></image>
+        <image class="closeImv" src="../../images/delect.png" mode="scaleToFill" catchtap="deleteImvpreview" data-id="{{index}}"></image>
+      </view>
+ 
+      <!--这个是选择图片-->
+      <view class="chooseView" bindtap="choosepreview" style="border-radius: 5px" wx:if="{{chooseViewShowpreview}}">
+        <image class="chooseImv" src="../../images/add.png"></image>
+      </view>
+    </view>
+ 
+    <view class='upImv_text'>轮播图片上传</view>
+    <view class="addImv">
+      <!--这个是已经选好的图片-->
+      <view wx:for="{{banner}}" wx:key="key" class="upFile" bindtap="showImageBanner" style="border-radius: 5px" data-id="{{index}}">
+        <image class="itemImv" src="{{item}}"></image>
+        <image class="closeImv" src="../../images/delect.png" mode="scaleToFill" catchtap="deleteImvBanner" data-id="{{index}}"></image>
+      </view>
+ 
+      <!--这个是选择图片-->
+      <view class="chooseView" bindtap="chooseBanner" style="border-radius: 5px" wx:if="{{chooseViewShowBanner}}">
+        <image class="chooseImv" src="../../images/add.png"></image>
+      </view>
+    </view>
+ 
+    <view class='upImv_text'>详情图片上传</view>
+    <view class="addImv">
+      <!--这个是已经选好的图片-->
+      <view wx:for="{{detail}}" wx:key="key" class="upFile" bindtap="showImageDetail" style="border-radius: 5px" data-id="{{index}}">
+        <image class="itemImv" src="{{item}}"></image>
+        <image class="closeImv" src="../../images/delect.png" mode="scaleToFill" catchtap="deleteImvDetail" data-id="{{index}}"></image>
+      </view>
+ 
+      <!--这个是选择图片-->
+      <view class="chooseView" bindtap="chooseDetail" wx:if="{{chooseViewShowDetail}}">
+        <image class="chooseImv" src="../../images/add.png"></image>
+      </view>
+    </view>
+ 
+  </view>
+  <button form-type='submit' class='sureRelease'>确认发布</button>
+  <navigator url="../mine/mine"></navigator>
+</form>

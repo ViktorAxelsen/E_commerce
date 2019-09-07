@@ -1,0 +1,16 @@
+<!--pages/cart1/cart1.wxml-->
+ <view class="J-shopping-cart-empty" hidden="{{ismall}}">
+<view class="shopping-cart-empty">
+        <view class="bg"></view> 
+        <view class="cart"></view>
+        <text class='empty-text'>您暂时还未创建商店</text>  
+        <p></p>
+        <navigator url="/pages/storeup/storeup">
+         <a href="//m.vip.com" class="button button-primary" >
+            去创建
+        </a>
+        </navigator>
+    </view>
+</view> 
+ 
+  

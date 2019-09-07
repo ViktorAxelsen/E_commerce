@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="5dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorNavHeader">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+            
+            <ImageView
+                android:id="@+id/video_image"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/grape_test"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="2dp">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/outline_play_arrow_white_18"/>
+
+                <TextView
+                    android:id="@+id/video_play_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="XXX"
+                    android:textSize="12sp"
+                    android:textColor="#fff"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"/>
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="50dp"
+                    android:src="@drawable/outline_subtitles_white_18"/>
+
+                <TextView
+                    android:id="@+id/video_barrage_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="111"
+                    android:textSize="12sp"
+                    android:textColor="#fff"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="70dp"/>
+
+                <TextView
+                    android:id="@+id/video_length"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2:39"
+                    android:textColor="#fff"
+                    android:textSize="12sp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"/>
+
+
+            </RelativeLayout>
+            
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/video_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="XXX\nXXXXXX"
+            android:textSize="13sp"
+            android:textColor="#fff"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:layout_margin="10dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/video_classification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="XXX"
+                android:textSize="12sp"
+                android:textColor="#80FFFFFF"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <Button
+                android:id="@+id/bottom_sheet_button"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/outline_more_vert_white_18dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="1dp"
+                android:backgroundTint="#80FFFFFF" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

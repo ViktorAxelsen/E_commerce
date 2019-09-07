@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="?attr/colorPrimary">
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/outline_arrow_back_ios_black_18" />
+
+        <TextView
+            android:text="结算"
+            android:layout_toRightOf="@id/back"
+            android:layout_marginLeft="5dp"
+            style="@style/top_toolbar_text_style"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¥9999.00"
+        android:textSize="30sp"
+        android:textColor="@android:color/holo_blue_dark"
+        android:layout_centerInParent="true"/>
+
+    <Button
+        android:id="@+id/pay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rounded_corner_button"
+        android:backgroundTint="@color/shoppingColor"
+        android:text="付款"
+        android:textSize="18sp"
+        android:textColor="#fff"
+        android:layout_below="@id/price"/>
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,3 @@
+    <view class="form">
+      <input class="searchInput" value='{{keyWord}}' bindconfirm='goSearch' placeholder="请输入搜索关键字" type="text" />
+    </view>

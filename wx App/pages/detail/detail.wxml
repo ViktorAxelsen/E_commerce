@@ -1,0 +1,71 @@
+<!--pages/detail/detail.wxml-->
+<!-- banner -->
+<import src="../template/template.wxml" />
+ 
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{goods.imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" data-src="{{item}}" bindtap="previewImage" mode="widthFix"></image>
+    </swiper-item>
+  </block>
+</swiper>
+<!--商品价格和商品描述-->
+<view>
+<view class="product-name-wrap">
+    {{goods.title}}
+  </view>
+  <view class="product-price-wrap">
+      <view>
+        <p class="product-price-new">￥{{goods.price}}</p>  
+        <p class="product-price-old" wx:if="{{goods.privilegePrice!=0}}">原价￥{{goods.privilegePrice}}</p> 
+      </view>
+  </view>
+</view>
+
+ <view class="details"> 
+  <scroll-view scroll-y="true">
+    <text>商品详情</text>
+    <block wx:for-items="{{goods.detailImg}}" wx:key="name">
+       <image class="image_detail" src="{{item}}" mode="widthFix"/> 
+    </block>
+    <view class="temp"></view>
+  </scroll-view>
+ </view>   
+<!-- 底部悬浮栏 -->
+<view class="detail-nav">
+  <image bindtap="toCar" src="../../images/cart1.png" />  
+  <view class="line_nav"></view>
+   <image bindtap="addLike" src="{{isLike?'../../images/enshrine_select.png':'../../images/enshrine.png'}}" /> 
+  <button data-goodid="1"  class="button-green" bindtap="toggleDialog" >加入购物车</button>
+  <button class="button-red" bindtap="immeBuy" formType="submit">立即购买</button>
+</view>
+
+<!--加入购物车-->
+
+<view class="dialog {{ showDialog ? 'dialog--show' : '' }}">
+      <view class="dialog__mask" bindtap="toggleDialog" />
+      <view class="dialog__container">
+        <view class="row">
+          <icon bindtap="closeDialog" class="image-close" type="cancel" size="25"/>
+          <image class="image-sku" src="{{goods.imgUrl}}"></image>
+          <view class="column">
+            <text class="sku-price">￥{{goods.totalMoney}}</text>
+            <text class="sku-title">购买次数 {{goods.buyRate}} 件</text>
+            <text class="sku-title">剩余数量：{{goods.store}}</text>
+          </view>
+        </view>
+        <text class="border-line"></text>
+        <view class="row">
+          <text >购买数量</text>
+          <view class="quantity-position">
+              <!-- <template is="quantity"  data="{{ ...item,index:index}}" />  -->
+               <template is="quantity" data="{{ ...goods,index:1}}" /> 
+          </view>
+        </view>
+        <text class="border-line"></text>
+
+        <button data-goodid="{{goods.goodsId}}" class="button-addCar" bindtap="addCar" formType="submit">确定</button>
+      </view>
+    </view>
+
+  

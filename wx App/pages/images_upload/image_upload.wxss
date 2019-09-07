@@ -1,0 +1,124 @@
+/* pages/productReleased/productReleased.wxss */
+ 
+page {
+  background-color: #f1f1f1;
+}
+ 
+.title {
+  margin-top: 5rpx;
+  background-color: white;
+  width: 100%;
+  height: 80rpx;
+}
+ 
+.title_text {
+  margin-left: 20rpx;
+  width: 100%;
+  height: 50rpx;
+  padding-top: 10rpx;
+  display: flex;
+}
+ 
+.title_text text {
+  font-size: 30rpx;
+}
+ 
+.title_text input {
+  font-size: 30rpx;
+  width: 60vw;
+  margin-left: 20rpx;
+}
+ 
+.textarea {
+  height: 100rpx;
+  font-size: 30rpx;
+  margin-left: 40rpx;
+  width: 500rpx;
+}
+ 
+.info-point {
+  background-color: white;
+  width: 100%;
+  height: 100rpx;
+  margin-top: 5rpx;
+}
+ 
+/*选择图片View*/
+ 
+.addImv {
+  background-color: white;
+  /* border: 1px dashed gray; */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 5rpx;
+}
+ 
+.upImv {
+  background-color: white;
+  width: 100%;
+  margin-top: 5rpx;
+}
+ 
+.upImv_text {
+  font-size: 30rpx;
+  margin-left: 20rpx;
+  padding-top: 20rpx;
+}
+ 
+/*添加图片*/
+ 
+.addImv .chooseView {
+  width: 180rpx;
+  height: 180rpx;
+  margin: 20rpx 20rpx;
+  background-color: #f2f6f9;
+  border: 1px dashed lightgray;
+  text-align: center;
+  line-height: 180rpx;
+  /* padding: 0rpx 7rpx; */
+  border-radius: 5px;
+  margin-left: 40rpx;
+}
+ 
+.addImv .chooseImv {
+  width: 50rpx;
+  height: 50rpx;
+}
+ 
+/*已选择的图片*/
+ 
+.addImv .upFile {
+  width: 180rpx;
+  height: 180rpx;
+  position: relative;
+  padding: 0rpx 7rpx;
+  margin-left: 40rpx;
+  border: 1px solid #c0ccda;
+}
+ 
+.addImv .upFile .itemImv {
+  width: 180rpx;
+  height: 180rpx;
+  padding: 0rpx 7rpx;
+}
+ 
+.addImv .upFile .closeImv {
+  position: absolute;
+  right: 0rpx;
+  top: 0rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+ 
+.sureRelease {
+  background-color: #1C86EE;
+  color: white;
+  position: fixed;
+  width: 100%;
+  bottom: 0rpx;
+}
+ 
+.icon {
+  margin-left: 80rpx;
+}

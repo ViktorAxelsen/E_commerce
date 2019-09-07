@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:exitFadeDuration="400"
+    android:enterFadeDuration="400">
+
+    <item android:state_checked="true" android:drawable="@drawable/baseline_home_black_18"
+        android:backgroundTint="@android:color/holo_blue_dark"/>
+    <item android:state_checked="false" android:drawable="@drawable/outline_home_black_18"/>
+
+</selector>

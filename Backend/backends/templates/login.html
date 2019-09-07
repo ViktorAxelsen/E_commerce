@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录</title>
+		<link rel="stylesheet" type="text/css" href="{% static "css/public.css" %}"/>
+		<link rel="stylesheet" type="text/css" href="{% static "css/login.css" %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static "css/myorder.css" %}"/>
+	</head>
+	<body>
+		<!-------------------login-------------------------->
+		<div class="login">
+			<form action="login" method="post">
+                {% csrf_token %}
+				<h1><a href="index.html"><img src="{% static "img/temp/logo.png" %}"></a></h1>
+                <div class="msg-warn hide"><b></b>公共场所不建议自动登录，以防账号丢失</div>
+				<p></p>
+                <div>
+{#                    button 会使得成为input提交按钮#}
+{#                <a href="login.html"><button>账号密码登录</button></a>#}
+                    <a href="login.html"><button>账号密码登录</button></a>
+                <a href="login2.html">手机验证码登录</a>
+                </div>
+                <p></p>
+
+				<p><input type="text" name="user_nickname"  placeholder="昵称"></p>
+				<p><input type="text" name="user_password"  placeholder="密码"></p>
+				<p><input type="submit"  value="登  录"></p>
+				<p class="txt"><a class="" href="register.html">注册</a><a href="forget.html">忘记密码</a></p>
+			</form>
+		</div>
+
+    <script src="{% static "js/jquery-1.12.4.min.js" %}" type="text/javascript" charset="utf-8"></script>
+		<script src="{% static "js/public.js" %}" type="text/javascript" charset="utf-8"></script>
+		<script src="{% static "js/user.js" %}" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>注册</title>
+		<link rel="stylesheet" type="text/css" href="{% static "css/public.css"  %}"/>
+		<link rel="stylesheet" type="text/css" href="{% static "css/login.css" %}"/>
+	</head>
+	<body>
+		<!-------------------reg-------------------------->
+		<div class="reg">
+			<form action="register" method="post">
+                {% csrf_token %}
+				<h1><a href="index.html"><img src="{% static "img/temp/logo.png" %}"></a></h1>
+				<p>用户注册</p>
+				<p><input type="text" name="user_nickname"  placeholder="请输入昵称"></p>
+				<p><input type="text" name="user_sex"  placeholder="请输入性别"></p>
+				<p><input type="text" name="user_tel"  placeholder="请输入手机号"></p>
+                <p><input type="text" name="user_password" placeholder="请输入密码"> </p>
+				<!--<p class="txtL txt"><input class="code" type="text" name="" value="" placeholder="验证码"><img src="img/temp/code.jpg"></p>
+				-->
+				<p><input type="submit"  value="注册"></p>
+				<p class="txtL txt">完成此注册，即表明您同意了我们的<a href="#"> <使用条款和隐私策略> </a></p>
+				<p class="txt"><a href="login.html"><span></span>已有账号登录</a></p>
+				<!--<a href="#" class="off"><img src="img/temp/off.png"></a>-->
+			</form>
+
+		</div>
+	</body>
+</html>

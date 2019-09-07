@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/colorPrimary">
+
+    <Button
+        android:id="@+id/main"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/outline_home_black_18"
+        style="@style/bottom_button_style"/>
+
+    <Button
+        android:id="@+id/people"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="135dp"
+        android:background="@drawable/outline_people_black_18"
+        style="@style/bottom_button_style"/>
+
+    <Button
+        android:id="@+id/social"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="135dp"
+        android:background="@drawable/outline_style_black_18"
+        style="@style/bottom_button_style"/>
+
+    <Button
+        android:id="@+id/person"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/outline_person_black_18"
+        style="@style/bottom_button_style"/>
+
+</RelativeLayout>

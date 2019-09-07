@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <android.support.v7.widget.SearchView
+            android:id="@+id/search_view"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="6"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_corner_search_box"
+            app:queryHint="XXXX"
+            app:iconifiedByDefault="true"></android.support.v7.widget.SearchView>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:layout_gravity="center"
+            android:padding="10dp">
+
+            <Button
+                android:id="@+id/download"
+                android:background="@drawable/outline_arrow_downward_black_18"
+                android:layout_alignParentLeft="true"
+                style="@style/top_button_style" />
+
+            <Button
+                android:id="@+id/history"
+                android:background="@drawable/outline_history_black_18"
+                android:layout_centerInParent="true"
+                style="@style/top_button_style" />
+
+            <Button
+                android:id="@+id/folder"
+                android:background="@drawable/outline_folder_black_18"
+                android:layout_alignParentRight="true"
+                style="@style/top_button_style" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,51 @@
+    <view class="form">
+      <view class="searchInput"catchtap="navigate"></view>
+    </view>
+<!--pages/home/home.wxml-->
+<!-- banner -->
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{banners}}">
+      <swiper-item >
+        <image src="{{item.banner_image}}" mode="widthFix" data-goodsid="{{item.banner_belong}}" catchtap="show"/>
+      </swiper-item>
+    </block>
+  </swiper>  
+<view>
+  <view class="navs">
+    <block wx:for-items="{{menus}}" wx:key="name">
+      <view class="nav-item"  catchtap="toOrder"  data-type="{{item.item_category}}" data-typeid="{{item.item_category_id}}">
+        <image src="{{item.item_category_image}}" class="nav-image" />
+        <text>{{item.item_category}}</text>
+      </view>
+    </block>
+  </view>
+ </view> 
+<!--福利专场 start-->
+  <view class="welfare-container"> 
+  <view class="category-title">
+    <text class="title">福利专场</text>
+    <view class="line_name">
+      <text>每天早10晚8准时上新</text>
+    </view>
+  </view>  
+  <scroll-view scroll-y="true">
+      <view class="welfares">
+         <block wx:for-items="{{newGoods}}" wx:key="id">
+          <view class="welfares-good" catchtap="catchTapCategory" data-name="{{item.item_name}}" data-goodsid="{{item.item_id}}">
+            <view>
+              <image src="{{item.item_preview_image}}" class="welfares-image" mode="widthFix"/> 
+            </view>
+            <view class="product-name">
+              {{item.item_name}}
+            </view>
+            <view class="product-price-wrap">
+              <p class="product-price-new" >￥{{item.item_price}}</p>  
+              <p class="product-price-old" wx:if ="{{item.item_prePrice != 0}}">￥{{item.item_prePrice}}</p> 
+              <p class="discount"wx:if ="{{item.item_off != 0}}">{{item.item_off}}折</p>  
+            </view>
+            
+          </view>
+        </block> 
+      </view>
+  </scroll-view>  
+</view>   

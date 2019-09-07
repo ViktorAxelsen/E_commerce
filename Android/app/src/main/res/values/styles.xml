@@ -1,0 +1,106 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="PersonalInformationActivityTheme" parent="AppTheme">
+
+        <item name="android:statusBarColor">@android:color/transparent</item>
+
+    </style>
+    
+    <style name="bottom_button_style">
+
+        <item name="android:layout_width">35dp</item>
+        <item name="android:layout_height">35dp</item>
+        <item name="android:layout_centerVertical">true</item>
+
+    </style>
+
+    <style name="top_button_style">
+
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_centerVertical">true</item>
+
+    </style>
+
+    <style name="bottom_radio_button_style">
+
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:drawablePadding">0dp</item>
+        <item name="android:button">@null</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@drawable/bottom_toolbar_text_color_selector</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:drawableTint">@drawable/bottom_toolbar_image_tint_selector</item>
+
+    </style>
+
+
+    <style name="selector_fade">
+
+        <item name="android:enterFadeDuration">400</item>
+        <item name="android:exitFadeDuration">400</item>
+
+    </style>
+
+    <style name="top_toolbar_text_style">
+
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_centerVertical">true</item>
+
+    </style>
+    
+    <style name="PopupWindowAnimation" parent="@android:style/Animation">
+
+        <item name="android:windowEnterAnimation">@anim/popup_in</item>
+        <item name="android:windowExitAnimation">@anim/popup_out</item>
+
+    </style>
+
+    <style name="BottomSheetAnimation" parent="@android:style/Animation">
+
+        <item name="android:windowEnterAnimation">@anim/bottom_sheet_in</item>
+        <item name="android:windowExitAnimation">@anim/bottom_sheet_out</item>
+
+    </style>
+
+    <style name="shopping_radio_button_style">
+
+        <item name="android:layout_width">120dp</item>
+        <item name="android:layout_height">35dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:button">@null</item>
+        <item name="android:background">@drawable/shopping_radio_button_backgroud_selector</item>
+        <item name="android:textColor">@drawable/shopping_radio_button_text_color_selector</item>
+
+    </style>
+
+    <style name="CustomBottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="CustomBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheetStyle</item>
+        <item name="android:windowAnimationStyle">@style/BottomSheetAnimation</item>
+    </style>
+
+
+
+
+
+
+</resources>

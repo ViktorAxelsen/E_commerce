@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="5dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/trade_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="XXXXX"
+            android:textColor="#000"
+            android:textSize="14sp"/>
+
+
+        <TextView
+            android:id="@+id/trade_item_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="XXXXX"
+            android:textColor="#000"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/trade_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="XXXXX"
+            android:textColor="#000"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/trade_create_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="XXXXX"
+            android:textColor="#000"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/address_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:text="XXXXX"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/address_tel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="XXXXX"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="XXXXX"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+
+</android.support.v7.widget.CardView>

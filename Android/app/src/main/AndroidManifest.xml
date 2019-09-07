@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.viktor.e_commerce">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".AddressActivity" android:launchMode="singleTask"></activity>
+        <activity
+            android:name=".UpItemActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".StoreSetting"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".WaitSendActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".StoreActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".OpenStoreActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".RegisterActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".CollectionActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".BrowseHistoryActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".OrderActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".WaitReceiveActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".BuyActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".LoginActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ItemListActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ItemDetailActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/PersonalInformationActivityTheme" />
+        <activity
+            android:name=".SearchActivity"
+            android:launchMode="singleTask" />
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="duOE7dZy7OvdFO9uIGacdXzS3Z4ETpur" />
+
+        <activity
+            android:name=".PersonalInformationActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/PersonalInformationActivityTheme" />
+        <activity
+            android:name=".SettingActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.viktor.e_commerce.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+    </application>
+
+</manifest>
