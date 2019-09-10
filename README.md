@@ -6,24 +6,26 @@
 
 <img src="截图/Me.jpg" width="350" height="700" align=center>
 
-<img src="截图/history.jpg" align=center>
+<img src="截图/history.jpg" width="350" height="700" align=center>
 
-<img src="截图/cart_for_android.jpg" align=center>
+<img src="截图/cart_for_android.jpg" width="350" height="700" align=center>
 
-<img src="截图/store.jpg" align=center>
+<img src="截图/store.jpg" width="350" height="700" align=center>
 
-<img src="截图/wait_send.jpg" align=center>
+<img src="截图/wait_send.jpg" width="350" height="700" align=center>
 
-<img src="截图/item_list.jpg" align=center>
+<img src="截图/item_list.jpg" width="350" height="700" align=center>
 
-<img src="截图/item_detail.jpg" align=center>
+<img src="截图/item_detail.jpg" width="350" height="700" align=center>
 
-<img src="截图/frag.jpg" align=center>
+<img src="截图/frag.jpg" width="350" height="700" align=center>
 
 --------------------------------------------------------------
+
 ## 2.Backend目录下为后端源码。目前已经部署在阿里云服务器,可以直接使用访问
 主要借助Django REST Framework开发,配置好后也可以搭建自己的后台
 API文档中有后端数据库的详细说明以及API使用详细说明，全文长达9000字。
+
 --------------------------------------------------------------
 ## 3.Forend目录下为前端源码,现已有[网址](http://www.mallproject.cn:8000/login)陆续完善中可以直接访问
 ![首页](截图/login.PNG)
