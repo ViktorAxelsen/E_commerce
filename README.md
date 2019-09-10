@@ -4,7 +4,7 @@
 项目由Android Studio开发，由于时间关系，App只向下兼容到Andriod 6.0，更低版本不保证能运行。
 提供APK下载适用(在Android目录下)
 
-<img src="截图/Me.jpg" align=center>
+<img src="截图/Me.jpg" width="400" height="700" align=center>
 
 <img src="截图/history.jpg" align=center>
 
@@ -19,6 +19,7 @@
 <img src="截图/item_detail.jpg" align=center>
 
 <img src="截图/frag.jpg" align=center>
+
 --------------------------------------------------------------
 ## 2.Backend目录下为后端源码。目前已经部署在阿里云服务器,可以直接使用访问
 主要借助Django REST Framework开发,配置好后也可以搭建自己的后台
