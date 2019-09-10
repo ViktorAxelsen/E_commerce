@@ -2,7 +2,22 @@
 ## 1.Android
 目录下是为电商平台适配的安卓平台应用项目源码
 项目由Android Studio开发，由于时间关系，App只向下兼容到Andriod 6.0，更低版本不保证能运行。
-提供APK下载适用
+提供APK下载适用(在Android目录下)
+<img src="截图/Me.jpg" width="400" height="700" alt="首页" align=center>
+
+<img src="截图/history.jpg" width="400" height="700" alt="首页" align=center>
+
+<img src="截图/cart_for_android.jpg" width="400" height="700" alt="首页" align=center>
+
+<img src="截图/store.jpg" width="400" height="700" alt="首页" align=center>
+
+<img src="截图/wait_send.jpg" width="400" height="700" alt="首页" align=center>
+
+<img src="截图/item_list.jpg" width="400" height="700" alt="首页" align=center>
+
+<img src="截图/item_detail.jpg" width="400" height="700" alt="首页" align=center>
+
+<img src="截图/frag.jpg" width="400" height="700" alt="首页" align=center>
 --------------------------------------------------------------
 ## 2.Backend目录下为后端源码。目前已经部署在阿里云服务器,可以直接使用访问
 主要借助Django REST Framework开发,配置好后也可以搭建自己的后台
