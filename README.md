@@ -15,6 +15,7 @@ API文档中有后端数据库的详细说明以及API使用详细说明，全�
 >我的
 --------------------------------------------------------------
 ## wx App目录下为微信小程序源码   可以直接打开使用
+<img src="截图/index.JPG" width="400" height="700" alt="首页" align=center>
 ![首页](截图/index.JPG)
 >首页
 ![category](截图/category.JPG)
