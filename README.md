@@ -8,7 +8,7 @@
 主要借助Django REST Framework开发,配置好后也可以搭建自己的后台
 API文档中有后端数据库的详细说明以及API使用详细说明，全文长达9000字。
 --------------------------------------------------------------
-## 3.Forend目录下为前端源码,现已有[网址,陆续完善中](http://www.mallproject.cn:8000/login)可以直接访问
+## 3.Forend目录下为前端源码,现已有[网址](http://www.mallproject.cn:8000/login)陆续完善中可以直接访问
 ![首页](截图/login.PNG)
 >首页
 ![mine](截图/mine1.PNG)
