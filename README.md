@@ -1,8 +1,10 @@
 # E_commerce
 ## 1.Android
 目录下是为电商平台适配的安卓平台应用项目源码
+
 项目由Android Studio开发，由于时间关系，App只向下兼容到Andriod 6.0，更低版本不保证能运行。
-提供APK下载适用(在Android目录下)
+
+**提供APK下载试用(在Android目录下)**
 
 <img src="截图/Me.jpg" width="350" height="700" align=center>
 
@@ -27,12 +29,15 @@
 API文档中有后端数据库的详细说明以及API使用详细说明，全文长达9000字。
 
 --------------------------------------------------------------
+
 ## 3.Forend目录下为前端源码,现已有[网址](http://www.mallproject.cn:8000/login)陆续完善中可以直接访问
 ![首页](截图/login.PNG)
 >首页
 ![mine](截图/mine1.PNG)
 >我的
+
 --------------------------------------------------------------
+
 ## wx App目录下为微信小程序源码   可以直接打开使用
 <img src="截图/index.JPG" width="400" height="700" alt="首页" align=center>
 
