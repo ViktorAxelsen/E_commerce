@@ -4,7 +4,7 @@
 项目由Android Studio开发，由于时间关系，App只向下兼容到Andriod 6.0，更低版本不保证能运行。
 提供APK下载适用(在Android目录下)
 
-<img src="截图/Me.jpg" width="450" height="700" align=center>
+<img src="截图/Me.jpg" width="350" height="700" align=center>
 
 <img src="截图/history.jpg" align=center>
 
